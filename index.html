@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Ulang Tahun Tiara</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom right, #cce7ff, #e6f2ff);
+      overflow-x: hidden;
+    }
+    h1 {
+      text-align: center;
+      color: #004c99;
+      margin-top: 2rem;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem 1rem;
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 180px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .message {
+      max-width: 600px;
+      margin: auto;
+      padding: 1.5rem;
+      background: #ffffffdd;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #003366;
+    }
+    .butterfly {
+      position: absolute;
+      width: 40px;
+      animation: flutter 10s infinite ease-in-out;
+    }
+    @keyframes flutter {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-50px) rotate(20deg); }
+      100% { transform: translateY(0) rotate(-20deg); }
+    }
+    audio {
+      display: block;
+      margin: 2rem auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selamat Ulang Tahun, Tiara! 🎉</h1>
+  <div class="message">
+    <p>Hai Tiara,</p>
+    <p>Di ulang tahun ke-23 ini, semoga kamu selalu dikelilingi hal-hal baik dan orang-orang yang tulus menyayangimu. Aku cuma ingin bilang, meski dari jauh, aku masih ingat hari spesialmu ini.</p>
+    <p>Semoga tempat yang kamu pijak selalu membawa kedamaian, dan semoga langkah-langkahmu ke depan penuh keberanian dan cinta yang baru.</p>
+    <p>Jangan lupa senyum, yaa... karena senyummu selalu jadi hal yang paling indah untuk dilihat 🌸</p>
+  </div>
+  <audio controls autoplay loop>
+    <source src="birthday_song_vibe.mp3" type="audio/mpeg">
+    Lagu tidak tersedia.
+  </audio>
+  <div class="gallery">
+    <img src="foto1.jpg" />
+    <img src="foto2.jpg" />
+    <img src="foto3.jpg" />
+    <img src="ghibli_us.jpg" />
+  </div>
+  <!-- 18 butterflies -->
+  <script>
+    for (let i = 0; i < 18; i++) {
+      const b = document.createElement("img");
+      b.src = "https://i.ibb.co/QmczYyX/butterfly-icon.png";
+      b.className = "butterfly";
+      b.style.top = Math.random() * window.innerHeight + "px";
+      b.style.left = Math.random() * window.innerWidth + "px";
+      b.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(b);
+    }
+  </script>
+</body>
+</html>
